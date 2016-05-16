@@ -13,6 +13,7 @@ angular.module('githubCommitsApp', [])
       }).then(function(response) {
         self.commits = response.data;
         self.err = '';
+        // console.log(this.self.commits);
       }, function(response) {
         if (response.status === 403 && response.data.message.indexOf('rate limit') !== -1) {
           self.err = 'Looks like you ran out of API requests!';
