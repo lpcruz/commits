@@ -1,0 +1,48 @@
+<!--Doctype HTML-->
+<html lang="en" ng-app='githubCommitsApp'>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>commits</title>
+
+  <!-- Meta Descriptions -->
+  <meta name="description" content="A beautiful way to show commits">
+  <meta name="author" content="lcruz">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Favicon -->
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <h4>A Beautiful Way to Show Commits</h4>
+
+  <div ng-controller="CommitsController as cmtsctrl">
+
+    <div ng-if="cmtsctrl.err" class="err">{{ cmtsctrl.err }}</div>
+
+    <ul id="commits">
+      <li ng-repeat="commit in cmtsctrl.commits" class="commit"><span class="message">{{ commit.commit.message }}</span>
+        <cite class="author">-{{ commit.commit.author.name }}</cite>
+      </li>
+    </ul>
+  </div>
+
+
+<!--Scripts-->
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js'></script>
+<script src='js/app.js'></script>
+
+</body>
