@@ -27,15 +27,17 @@
 </head>
 
 <body>
-  <h4>A Beautiful Way to Show Commits</h4>
+  <div class="commit-container">
+    <h4>A Beautiful Way to Show Commits</h4>
 
-  <div ng-controller="CommitsController as cmtsctrl">
+    <div ng-controller="CommitsController as cmtsctrl">
 
-    <div ng-if="cmtsctrl.err" class="err">{{ cmtsctrl.err }}</div>
+      <div ng-if="cmtsctrl.err" class="err">{{ cmtsctrl.err }}</div>
 
-    <ul id="commits">
-      <li ng-repeat="commit in cmtsctrl.commits" class="commit"><span class="message">{{ commit.commit.message }}</span></li>
-    </ul>
+      <ul id="commits">
+        <li ng-repeat="commit in cmtsctrl.commits" class="commit"><span class="message">{{ commit.commit.message }}</span></li>
+      </ul>
+    </div>
   </div>
 
 
