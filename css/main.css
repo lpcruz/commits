@@ -1,0 +1,11 @@
+/* Styles */
+.commit-container {
+  margin: 0 auto;
+  display: block;
+  width: 750px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
