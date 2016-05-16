@@ -34,9 +34,7 @@
     <div ng-if="cmtsctrl.err" class="err">{{ cmtsctrl.err }}</div>
 
     <ul id="commits">
-      <li ng-repeat="commit in cmtsctrl.commits" class="commit"><span class="message">{{ commit.commit.message }}</span>
-        <cite class="author">-{{ commit.commit.author.name }}</cite>
-      </li>
+      <li ng-repeat="commit in cmtsctrl.commits" class="commit"><span class="message">{{ commit.commit.message }}</span></li>
     </ul>
   </div>
 
