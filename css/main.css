@@ -2,10 +2,19 @@
 .commit-container {
   margin: 0 auto;
   display: block;
-  width: 750px;
+  width: 1000px;
+
+}
+
+.title {
+  font-family: courier;
   text-align: center;
+  font-size: 35px;
 }
 
 ul {
   list-style: none;
+  line-height: 50px;
+  font-size: 15px;
+  font-family: courier;
 }

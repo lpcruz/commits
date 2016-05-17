@@ -28,21 +28,42 @@
 
 <body>
   <div class="commit-container">
-    <h4>A Beautiful Way to Show Commits</h4>
+    <h4 class="title">Commits</h4>
 
     <div ng-controller="CommitsController as cmtsctrl">
 
       <div ng-if="cmtsctrl.err" class="err">{{ cmtsctrl.err }}</div>
 
       <ul id="commits">
-        <li ng-repeat="commit in cmtsctrl.commits" class="commit"><span class="message">{{ commit.commit.message }}</span></li>
+        <li ng-repeat="commit in cmtsctrl.commits" class="commit"><span class="message">"{{ commit.commit.message }}"</span></li>
       </ul>
+
+      <div id="commitMessage"></div>
+
     </div>
   </div>
 
 
+
 <!--Scripts-->
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src='js/app.js'></script>
 
+
+<script>
+
+$(document).ready(function(){
+        iterator( $('#commits').hide().first() );
+        function iterator( el ) {
+            el.fadeIn(1850, function() { iterator( el.next() ); } )
+        }
+      })
+
+</script>
+
+
 </body>
+
+
+</html>
