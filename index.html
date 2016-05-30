@@ -1,5 +1,5 @@
 <!--DOCTYPE HTML-->
-<html lang="en" ng-app='githubCommitsApp'>
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -11,11 +11,7 @@
     <meta name="author" content="lcruz">
 
     <!-- Styles -->
-    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
-
-    <!-- Favicon -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
 
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -30,15 +26,17 @@
     <div class="commit-container">
       <h4 class="title">Commits</h4>
 
-      <div ng-controller="CommitsController as cmtsctrl">
+      <!-- <div ng-controller="CommitsController as cmtsctrl"> -->
 
-        <div ng-if="cmtsctrl.err" class="err"></div>
+        <!-- <div ng-if="cmtsctrl.err" class="err"></div> -->
 
-        <ul id="commit-list">
+        <!-- <ul id="commit-list">
           <li class="commit-messages"><span class="message"></span></li>
-        </ul>
+        </ul> -->
 
-        <div id="commitMessage"></div>
+        <div class="commit-messages">
+          <p class="messages"></p>
+        </div>
 
       </div>
     </div>
@@ -48,21 +46,8 @@
     <!--Scripts-->
     <!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js'></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
     <script src='js/app.js'></script>
-
-
-    <!-- <script>
-
-    $(document).ready(function(){
-      iterator( $('#commits').hide().first() );
-      function iterator( el ) {
-        el.fadeIn(1850, function() { iterator( el.next() ); } )
-      }
-    })
-
-    </script> -->
-
-
   </body>
 
 
