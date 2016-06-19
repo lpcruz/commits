@@ -11,7 +11,7 @@ var Commits = (function() {
       success: function(data) {
         $('.messages').hide().fadeIn().html(data[i].commit.message);
         i++;
-        setTimeout(getCommits, 3000);
+        setTimeout(getCommits, 6000);
         if (i >= data.length) {
           i = 0;
         }
